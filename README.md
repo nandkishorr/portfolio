@@ -15,5 +15,5 @@ pnpm dev
 pnpm build
 ```
 
-Publish the generated `dist/public` directory to any static host. No application server, API, database, login, or platform credentials are required.
+Publish the generated `dist` directory to any static host. No application server, API, database, login, or platform credentials are required.
 

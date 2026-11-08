@@ -10,7 +10,7 @@ const server = await createServer({
 try {
   const { default: App } = await server.ssrLoadModule("/src/App.tsx");
   const markup = renderToString(createElement(App));
-  const path = new URL("../dist/public/index.html", import.meta.url);
+  const path = new URL("../dist/index.html", import.meta.url);
   const html = await readFile(path, "utf8");
   if (!html.includes('<div id="root"></div>'))
     throw new Error("Prerender root marker not found");

@@ -17,6 +17,6 @@ Open http://localhost:3000. To create a production build:
 npx --yes pnpm@10.18.0 build
 ```
 
-The deployable output is in `dist/public`. Serve it with a static host or the included Nginx Docker image; opening `index.html` through `file://` is not supported.
+The deployable output is in `dist`. Serve it with a static host or the included Nginx Docker image; opening `index.html` through `file://` is not supported.
 
 The website has no login or database requirement. Contact links open email/phone apps or the supplied social profiles; no message is sent automatically. Google Fonts require an internet connection and fall back to installed fonts when offline.
