@@ -8,7 +8,7 @@ import { useLocation } from "wouter";
 const NOT_FOUND_PATH = "/404";
 
 // Render for unknown routes and for items the server confirmed missing (e.g. `/page/:id`).
-// The redirect is irreversible: never render while loading, on other errors, or before auth resolves.
+// Hosting answers this path with HTTP 404 while still serving the app.
 export default function NotFound() {
   const [, setLocation] = useLocation();
 

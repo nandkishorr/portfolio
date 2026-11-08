@@ -1,14 +1,19 @@
 # Nandkishor R — Developer Portfolio
 
-React / Express / tRPC / Drizzle starter, adapted from the Sandbox web-db-user template.
+A React portfolio site that can be deployed as a static website. The portfolio does not require user accounts, authentication, a database, or a platform-specific agent service.
 
-- `pnpm dev`: development server; honors `PORT` (default 3000).
-- `pnpm build` / `pnpm start`: build and serve `dist/index.js` and `dist/public/`.
-- `pnpm db:migrate`: apply checked-in migrations. `pnpm db:push`: generate and apply new schema changes.
-- `pnpm check` / `pnpm test`: types and application tests.
+## Run locally
 
-Start with the Webdev skill's default-template guide. Platform login, storage, payments and service contracts live in its shared references; read the relevant capability before extending its helper.
+```sh
+pnpm install
+pnpm dev:static
+```
 
-`server/_core/publicConfig.ts` exposes only named public runtime values. Private keys stay server-side. The platform serves managed `/manus-storage/` assets; the application does not register a second proxy.
+## Build for deployment
 
-Platform configuration is readable and editable through `webdev.config`. Default settings are initial values, not enforced constraints. The agent may modify the files, commands and configuration or follow the flexible guide for another stack.
+```sh
+pnpm build:static
+```
+
+Publish the generated `dist/public` directory to any static host. The optional Express server is available with `pnpm dev` and `pnpm build` / `pnpm start`.
+
