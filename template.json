@@ -2,7 +2,7 @@
   "id": "portfolio-site",
   "name": "Portfolio Site",
   "description": "Deployable portfolio website without platform-specific authentication",
-  "capabilities": ["server", "static-site"],
+  "capabilities": ["static-site"],
   "files": [
     "package.json",
     "vite.config.ts",

@@ -7,8 +7,7 @@ import { useLocation } from "wouter";
 // Hosting answers this path with HTTP 404 while still serving the app.
 const NOT_FOUND_PATH = "/404";
 
-// Render for unknown routes and for items the server confirmed missing (e.g. `/page/:id`).
-// Hosting answers this path with HTTP 404 while still serving the app.
+// Render for unknown client-side routes.
 export default function NotFound() {
   const [, setLocation] = useLocation();
 

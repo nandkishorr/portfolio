@@ -6,14 +6,14 @@ A React portfolio site that can be deployed as a static website. The portfolio d
 
 ```sh
 pnpm install
-pnpm dev:static
+pnpm dev
 ```
 
 ## Build for deployment
 
 ```sh
-pnpm build:static
+pnpm build
 ```
 
-Publish the generated `dist/public` directory to any static host. The optional Express server is available with `pnpm dev` and `pnpm build` / `pnpm start`.
+Publish the generated `dist/public` directory to any static host. No application server, API, database, login, or platform credentials are required.
 
