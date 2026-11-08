@@ -22,7 +22,6 @@ import {
   Mail,
   MapPin,
   Network,
-  Phone,
   ServerCog,
   ShieldCheck,
   Terminal,
@@ -575,17 +574,6 @@ export function ContactView() {
               <span>
                 <small>NETWORK</small>
                 <strong>linkedin / nandkishorr</strong>
-              </span>
-              <ArrowUpRight size={16} />
-            </a>
-            <a
-              className="contact-node"
-              href={`tel:${profile.phone.replace(/\s/g, "")}`}
-            >
-              <Phone size={18} />
-              <span>
-                <small>PHONE</small>
-                <strong>{profile.phone}</strong>
               </span>
               <ArrowUpRight size={16} />
             </a>

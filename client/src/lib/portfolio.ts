@@ -4,7 +4,6 @@ export const profile = {
   name: "Nandkishor R",
   role: "Product & Backend Engineer",
   email: "iamnandkishorr@gmail.com",
-  phone: "+91 9447351280",
   location: "Adoor, Kerala, India",
   github: "https://github.com/nandkishorr",
   linkedin: "https://www.linkedin.com/in/nandkishorr/",

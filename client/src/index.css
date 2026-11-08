@@ -1989,8 +1989,7 @@ kbd {
     order: 3;
   }
   .editor-tabs {
-    height: 37px;
-    overflow-x: auto;
+    display: none;
   }
   .editor-tab {
     font-size: 8px;
