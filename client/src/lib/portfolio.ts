@@ -2,7 +2,7 @@ export type Page = "home" | "about" | "projects" | "contact" | "journal";
 
 export const profile = {
   name: "Nandkishor R",
-  role: "Product & Backend Engineer",
+  role: "Product Engineer",
   email: "iamnandkishorr@gmail.com",
   location: "Adoor, Kerala, India",
   github: "https://github.com/nandkishorr",

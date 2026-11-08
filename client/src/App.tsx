@@ -211,7 +211,7 @@ export default function App() {
   useEffect(() => {
     document.title =
       page === "home"
-        ? "Nandkishor R — Product & Backend Engineer"
+        ? "Nandkishor R — Product Engineer"
         : `${navigation.find(n => n.id === page)?.label} — Nandkishor R`;
   }, [page]);
   useEffect(() => {

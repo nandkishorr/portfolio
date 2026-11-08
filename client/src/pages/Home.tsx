@@ -25,8 +25,8 @@ export default function Home({ navigate }: { navigate: (page: Page) => void }) {
             </span>
           </h1>
           <div className="hero-role">
-            <span className="code-bracket">&lt;</span> Product & Backend
-            Engineer <span className="code-bracket">/&gt;</span>
+            <span className="code-bracket">&lt;</span> Product Engineer
+            <span className="code-bracket">/&gt;</span>
           </div>
           <p className="hero-description">
             Turning complex problems into thoughtful software.

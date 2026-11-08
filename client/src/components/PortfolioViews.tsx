@@ -382,7 +382,7 @@ export function AboutView() {
         <section className="about-bio">
           <p className="section-label">01 / APPROACH</p>
           <p>
-            I am Nandkishor, a Product &amp; Backend Engineer from Adoor,
+            I am Nandkishor, a Product Engineer from Adoor,
             Kerala. My work lives between product intent and implementation
             detail: shaping services, improving quality, and making complicated
             workflows easier to inspect.
