@@ -3244,3 +3244,16 @@ kbd {
     font-size: 11px;
   }
 }
+
+@media (max-width: 850px) and (orientation: landscape) {
+  .hero h1 {
+    font-size: clamp(32px, 6vw, 52px);
+    letter-spacing: -3px;
+    white-space: nowrap;
+  }
+
+  .name-last {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
