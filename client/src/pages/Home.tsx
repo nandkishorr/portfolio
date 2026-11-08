@@ -1,5 +1,5 @@
 import { ArrowDown, ArrowUpRight, Download, MapPin } from "lucide-react";
-import { markUrl, portraitUrl, resumeUrl } from "@/lib/assets";
+import { portraitUrl, resumeUrl } from "@/lib/assets";
 import type { Page } from "@/lib/portfolio";
 
 export default function Home({ navigate }: { navigate: (page: Page) => void }) {
@@ -74,11 +74,6 @@ export default function Home({ navigate }: { navigate: (page: Page) => void }) {
               <span>THE HUMAN BEHIND THE CODE</span>
               <span>[ NR ]</span>
             </div>
-            <img
-              className="portrait-mark"
-              src={markUrl}
-              alt="Nandkishor’s personal mark"
-            />
           </div>
           <div className="portrait-bottom">
             <span>LESS NOISE. MORE SIGNAL.</span>

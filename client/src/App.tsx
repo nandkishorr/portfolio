@@ -24,7 +24,7 @@ import {
   ProjectsView,
 } from "./components/PortfolioViews";
 import PortfolioTerminal from "./components/PortfolioTerminal";
-import { markUrl, resumeUrl } from "./lib/assets";
+import { resumeUrl } from "./lib/assets";
 import type { Page } from "./lib/portfolio";
 
 const navigation: { id: Page; label: string; file: string; ext: string }[] = [
@@ -280,7 +280,6 @@ export default function App() {
           onClick={() => navigate("home")}
           aria-label="Go to homepage"
         >
-          <img src={markUrl} alt="" />
           <span>
             nandkishor<span className="brand-divider">/</span>
             <span className="brand-secondary">portfolio</span>
@@ -304,9 +303,7 @@ export default function App() {
         </button>
       </header>
       <aside className="navigation-rail" aria-label="Portfolio navigation">
-        <div className="rail-top">
-          NR<span>®</span>
-        </div>
+        <div className="rail-top" aria-hidden="true" />
         <nav>
           {navigation.map((item, index) => (
             <a
@@ -445,7 +442,6 @@ export default function App() {
           role="status"
           aria-label="Initializing portfolio"
         >
-          <img src={markUrl} alt="" />
           <div className="boot-meta">
             <span>INITIALIZING PERSONAL WORKSPACE</span>
             <span>NK / 2026</span>
