@@ -364,7 +364,8 @@ kbd {
   color: #565754;
 }
 .editor-content {
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   flex: 1;
   min-height: 0;
   position: relative;
@@ -784,6 +785,9 @@ kbd {
 .portfolio-terminal {
   height: 117px;
   flex-shrink: 0;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
   border-top: 1px solid #323331;
   background: #0d0d0d;
   transition: height 0.2s;
@@ -797,6 +801,7 @@ kbd {
   height: 35px;
   padding: 0 22px;
   display: flex;
+  min-width: 0;
   align-items: center;
   justify-content: space-between;
   color: #71726f;
@@ -805,6 +810,7 @@ kbd {
 }
 .terminal-header > div {
   display: flex;
+  min-width: 0;
   align-items: center;
   gap: 20px;
   height: 100%;
@@ -850,17 +856,30 @@ kbd {
   height: calc(100% - 35px);
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   padding: 10px 24px;
   gap: 6px;
 }
 .terminal-output {
   flex: 1;
   min-height: 0;
+  min-width: 0;
+  max-width: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   font-size: 9px;
   line-height: 1.8;
   color: #858683;
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.terminal-line {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .terminal-line.command {
   color: #b2b5b0;
@@ -882,11 +901,19 @@ kbd {
 .terminal-input-line {
   display: flex;
   align-items: center;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
   gap: 9px;
   font-size: 10px;
 }
 .terminal-user {
+  min-width: 0;
+  flex-shrink: 1;
+  overflow: hidden;
   color: #bbbeb8;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .terminal-user span {
   color: #8d908a;
@@ -2114,10 +2141,9 @@ kbd {
     margin-top: 23px;
     letter-spacing: 0.4px;
   }
-  .hero-visual {
-    width: 76%;
-    max-width: 330px;
-    margin: 0 auto;
+  .hero-visual,
+  .contact-portrait {
+    display: none;
   }
   .portrait-frame {
     aspect-ratio: 1/1.02;

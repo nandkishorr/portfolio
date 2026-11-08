@@ -40,6 +40,9 @@ const matrix = Array.from({ length: 37 }, (_, row) =>
   ).join("")
 ).join("\n");
 
+// The terminal flow is intentionally disabled for now; flip this back to true to restore it.
+const TERMINAL_ENABLED = false;
+
 function CommandPalette({
   onClose,
   navigate,
@@ -250,12 +253,12 @@ export default function App() {
         e.preventDefault();
         setPalette(open => !open);
       }
-      if ((e.ctrlKey || e.metaKey) && e.key === "`") {
+      if (TERMINAL_ENABLED && (e.ctrlKey || e.metaKey) && e.key === "`") {
         e.preventDefault();
         setTerminalVisible(open => !open);
       }
       if (e.key === "Escape") setPalette(false);
-      if (!isTyping && !palette && e.key === "/") {
+      if (TERMINAL_ENABLED && !isTyping && !palette && e.key === "/") {
         e.preventDefault();
         setTerminalVisible(true);
         setTimeout(
@@ -322,13 +325,15 @@ export default function App() {
             </a>
           ))}
         </nav>
-        <button
-          className={`rail-terminal ${terminalVisible ? "active" : ""}`}
-          aria-label={terminalVisible ? "Hide terminal" : "Show terminal"}
-          onClick={() => setTerminalVisible(v => !v)}
-        >
-          <TerminalSquare size={19} />
-        </button>
+        {TERMINAL_ENABLED && (
+          <button
+            className={`rail-terminal ${terminalVisible ? "active" : ""}`}
+            aria-label={terminalVisible ? "Hide terminal" : "Show terminal"}
+            onClick={() => setTerminalVisible(v => !v)}
+          >
+            <TerminalSquare size={19} />
+          </button>
+        )}
       </aside>
       <div className="workspace">
         <div className="editor-tabs">
@@ -402,7 +407,7 @@ export default function App() {
             </a>
           </footer>
         </main>
-        {terminalVisible && (
+        {TERMINAL_ENABLED && terminalVisible && (
           <PortfolioTerminal
             navigate={navigate}
             onClose={() => setTerminalVisible(false)}
@@ -423,13 +428,15 @@ export default function App() {
           </span>
           <span>UTF-8</span>
           <span>TypeScript</span>
-          <button
-            aria-label={terminalVisible ? "Hide terminal" : "Show terminal"}
-            onClick={() => setTerminalVisible(v => !v)}
-          >
-            <TerminalSquare size={11} />
-            <span>terminal</span>
-          </button>
+          {TERMINAL_ENABLED && (
+            <button
+              aria-label={terminalVisible ? "Hide terminal" : "Show terminal"}
+              onClick={() => setTerminalVisible(v => !v)}
+            >
+              <TerminalSquare size={11} />
+              <span>terminal</span>
+            </button>
+          )}
           <span className="status-dot" /> ONLINE
         </div>
       </footer>
